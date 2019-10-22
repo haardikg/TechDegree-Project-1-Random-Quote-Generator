@@ -1,4 +1,4 @@
-
+// array of objects that holds the quotes, source, citation and year
 var quotes = [
 	{
 		quote: "The only thing to fear is fear itself.",
@@ -38,6 +38,7 @@ var quotes = [
 	},
 ];
 
+//getRandomQuote function which picks random quote
 function getRandomQuote(array) {
   var quoteIndex = Math.floor( Math.random() * (quotes.length));
   for (var i = 0; i < array.length; i++) {
@@ -47,7 +48,7 @@ return randomQuote;
 }
 
 
-
+//printQuote function which prints quote and quote info to page
 function printQuote() {
   var message = "";  
   var result = getRandomQuote(quotes);
@@ -65,5 +66,5 @@ printQuote();
 
 
 
-
+// method that makes the button work
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
